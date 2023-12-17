@@ -27,14 +27,10 @@ function concatenateArray() {
 
 // 5. Average Age
 function averageAge() {
-  let ageArr = [], count = 0, sum = 0;
-  data.forEach((element) => {
-    ageArr.push(element.age);
+  let sum = 0, count = 0
+  data.forEach((Element, index) => {
+    sum += data[index].age
     count++
-  })
-
-  ageArr.forEach((element, index) => {
-    sum += ageArr[index]
   })
   console.log(`Average age : ${(sum / count).toFixed(1)}`);
 }
